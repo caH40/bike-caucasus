@@ -24,8 +24,10 @@ app.use(express.urlencoded({ limit: '100mb' }));
 app.use(cookieParser());
 app.use('/api', router);
 app.use('/api', routerAuth);
-app.use(express.static(path.resolve(__dirname, '../client', 'build')));
-app.get('*', (req, res) => res.sendFile(path.resolve('build', 'index.html')));
+app.use(express.static(path.resolve(__dirname, '..', 'client', 'build')));
+app.get('*', (req, res) =>
+  res.sendFile(path.resolve(__dirname, '..', 'client', 'build', 'index.html'))
+);
 
 const start = async () => {
   try {
@@ -34,8 +36,6 @@ const start = async () => {
       .connect(process.env.MONGODB)
       .then(() => console.log('Connected to Mongo..'))
       .catch((error) => console.log(error));
-
-    // mongoose;
 
     app.listen(PORT, () => console.log('server started on PORT=' + PORT));
     await downloadImage();
