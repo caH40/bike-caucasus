@@ -1,0 +1,37 @@
+.nav {
+	width: 250px;
+	padding-right: 50px;
+	margin-right: 20px;
+}
+.title__list {
+	font-family: 'Montserrat Alternates';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 20px;
+	letter-spacing: 0.05em;
+	padding-top: 10px;
+	margin-bottom: 10px;
+	text-align: left;
+}
+.list {
+	margin-bottom: 20px;
+}
+.item {
+	display: block;
+	font-size: 16px;
+	margin-bottom: 10px;
+	border-bottom: solid transparent 2px;
+	transition: ease-in-out 0.4s;
+}
+.item:hover {
+	border-bottom: solid #39a034 2px;
+	transition: ease-in-out 0.4s;
+}
+
+.item:active {
+	color: #39a034;
+	transition: ease-in-out 0.4s;
+}
+.activeLink {
+	color: #39a034;
+}

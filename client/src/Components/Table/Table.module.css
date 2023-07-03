@@ -1,0 +1,80 @@
+table {
+	font-size: 16px;
+	font-family: 'Roboto';
+	width: 100%;
+	border-collapse: collapse;
+	padding-bottom: 40px;
+	margin-bottom: 15px;
+}
+td,
+th {
+	padding: 3px;
+	border: 1px solid rgb(82, 81, 81);
+	text-align: center;
+}
+th {
+	background: rgb(114, 151, 88);
+	color: #333;
+	cursor: pointer;
+}
+tr {
+	background-color: rgba(255, 255, 255, 0.3);
+}
+tr:nth-child(odd) {
+	background-color: rgba(255, 255, 255, 0.1);
+}
+tbody tr:hover {
+	/* cursor: pointer; */
+	background: #b99036;
+	color: #f1f1f1;
+}
+.th__title {
+	margin-right: 6px;
+}
+.th__flex {
+	display: flex;
+	justify-content: center;
+	pointer-events: none;
+}
+.td__link__btn {
+	display: inline-block;
+	width: 100px;
+}
+.align__left {
+	text-align: left;
+}
+.my-result {
+	color: #28cd00;
+}
+
+.link__btn {
+	display: inline-block;
+	background-color: rgb(255, 255, 255, 0.1);
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
+	font-family: 'Montserrat Alternates';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 10px;
+	color: #f1f1f1;
+	text-align: center;
+	cursor: pointer;
+	width: 100px;
+	padding: 5px;
+	text-transform: uppercase;
+}
+.link__btn:hover {
+	color: red;
+}
+.td__news__image {
+	width: 50px;
+	height: 30px;
+	object-fit: cover;
+	object-fit: center center;
+}
+.text__12 {
+	font-size: 12px;
+}
+.pointer {
+	cursor: pointer;
+}

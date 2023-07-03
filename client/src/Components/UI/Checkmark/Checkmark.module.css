@@ -1,0 +1,8 @@
+.validate {
+	width: 25px;
+	height: 31px;
+	margin-left: 15px;
+}
+.completed {
+	fill: #0ec717;
+}

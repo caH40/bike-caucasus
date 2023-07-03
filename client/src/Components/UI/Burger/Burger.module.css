@@ -1,0 +1,33 @@
+.burger {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	width: 30px;
+	height: 30px;
+	margin-right: 20px;
+	cursor: pointer;
+}
+.bar {
+	width: 30px;
+	height: 4px;
+	border-radius: 2px;
+	background-color: #f1f1f1;
+}
+/* когда присутствуюьт оба класса */
+.bar.clicked:nth-child(1) {
+	transform: rotate(45deg) translate(9px, 9px);
+	transition: ease-out 0.4s;
+}
+.bar.clicked:nth-child(2) {
+	transform: scale(0.1);
+	transition: ease-out 0.5s;
+}
+.bar.clicked:nth-child(3) {
+	transform: rotate(-45deg) translate(9px, -9px);
+	transition: ease-out 0.4s;
+}
+
+.bar.unClicked {
+	transform: rotate(0deg) translate(0);
+	transition: ease-out 0.4s;
+}

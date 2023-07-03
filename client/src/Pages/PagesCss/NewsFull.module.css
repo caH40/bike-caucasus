@@ -1,0 +1,59 @@
+.container {
+	width: 600px;
+	margin: 0px auto;
+}
+.box__interactive {
+	margin-bottom: 30px;
+}
+.title {
+	font-family: 'Montserrat Alternates';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 26px;
+	letter-spacing: 0.05em;
+	padding-top: 10px;
+	margin-bottom: 10px;
+	text-align: left;
+}
+.img {
+	width: 100%;
+	border-radius: 10px;
+	margin-bottom: 20px;
+	object-fit: cover;
+	object-position: center center;
+}
+.text {
+	font-size: 16px;
+	line-height: 21px;
+	letter-spacing: 0.07em;
+	margin-bottom: 30px;
+}
+.container__news a {
+	font-size: 16px;
+	line-height: 21px;
+	letter-spacing: 0.07em;
+	text-decoration: underline;
+}
+.date {
+	text-align: right;
+	margin-bottom: 5px;
+	font-size: 13px;
+}
+.title__page__news {
+	margin-bottom: 0;
+}
+
+@media screen and (max-width: 992px) {
+	.title {
+		font-size: 22px;
+		padding: 10px 0px;
+		margin: 0px;
+		text-align: center;
+	}
+}
+@media screen and (max-width: 650px) {
+	.container {
+		width: auto;
+		min-width: 340px;
+	}
+}

@@ -1,0 +1,13 @@
+.wrapper {
+	flex-grow: 1;
+}
+.title {
+	font-family: 'Montserrat Alternates';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 22px;
+	letter-spacing: 0.05em;
+	padding-top: 10px;
+	margin-bottom: 10px;
+	text-align: left;
+}

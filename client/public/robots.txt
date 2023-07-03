@@ -1,0 +1,18 @@
+User-Agent: *
+Allow: /
+
+Disallow: */api/
+
+Disallow: */auth/
+
+Disallow: */new-password/
+
+Disallow: */confirm-email/
+
+Disallow: */confirm-email/
+
+Disallow: */create-news
+
+Disallow: /admin*
+
+sitemap: https://bike-caucasus.ru/sitemap.xml

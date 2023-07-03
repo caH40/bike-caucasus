@@ -1,0 +1,51 @@
+.list {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.item {
+	margin-left: 44px;
+}
+.link {
+	font-family: 'Montserrat Alternates', sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 24px;
+	letter-spacing: 0.08em;
+	color: #f1f1f1;
+	border-bottom: solid transparent 2px;
+	transition: all 0.4s;
+	text-decoration: none;
+}
+
+.link:hover {
+	border-bottom: solid #39a034 2px;
+	transition: all 0.4s;
+}
+.activeLink {
+	color: #39a034;
+}
+
+@media screen and (max-width: 1100px) {
+	.item {
+		margin-left: 30px;
+	}
+}
+@media screen and (max-width: 980px) {
+	.list {
+		display: flex;
+		flex-direction: column;
+		height: 350px;
+		align-items: flex-start;
+		justify-content: space-between;
+		margin-top: 50px;
+	}
+	.item {
+		margin-left: 0px;
+	}
+	.link {
+		font-size: 22px;
+		line-height: 25px;
+	}
+}
