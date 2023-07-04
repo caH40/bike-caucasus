@@ -8,32 +8,34 @@ import { getModal } from '../../../redux/features/modalSlice';
 import classes from './Login.module.css';
 
 const Login = ({ isAuth }) => {
-	const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-	const srcIcon = isAuth?.status ? '/images/icons/logout.svg' : '/images/icons/login.svg';
+  const srcIcon = isAuth?.status
+    ? '/assets/images/icons/logout.svg'
+    : '/assets/images/icons/login.svg';
 
-	const getClick = () => {
-		if (isAuth?.status) {
-			dispatch(getModal({ component: '' }));
-			postLogout().then(data => {
-				localStorage.removeItem('accessToken');
-				dispatch(
-					getAuth({
-						status: false,
-						user: { email: '', id: '', role: '', username: '', photoProfile: '' },
-					})
-				);
-			});
-			dispatch(getAlert({ message: 'Вы вышли из аккаунта!', type: 'warning', isOpened: true }));
-		} else {
-			dispatch(getModal({ component: 'Authentication' }));
-		}
-	};
-	return (
-		<div className={classes.box} onClick={getClick}>
-			<img src={srcIcon} alt="login" />
-		</div>
-	);
+  const getClick = () => {
+    if (isAuth?.status) {
+      dispatch(getModal({ component: '' }));
+      postLogout().then((data) => {
+        localStorage.removeItem('accessToken');
+        dispatch(
+          getAuth({
+            status: false,
+            user: { email: '', id: '', role: '', username: '', photoProfile: '' },
+          })
+        );
+      });
+      dispatch(getAlert({ message: 'Вы вышли из аккаунта!', type: 'warning', isOpened: true }));
+    } else {
+      dispatch(getModal({ component: 'Authentication' }));
+    }
+  };
+  return (
+    <div className={classes.box} onClick={getClick}>
+      <img src={srcIcon} alt="login" />
+    </div>
+  );
 };
 
 export default Login;

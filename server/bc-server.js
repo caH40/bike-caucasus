@@ -24,7 +24,7 @@ app.use(express.urlencoded({ limit: '100mb' }));
 app.use(cookieParser());
 app.use('/api', router);
 app.use('/api', routerAuth);
-app.use(express.static(path.resolve(__dirname, '..', 'client', 'build')));
+app.use(express.static(path.resolve(__dirname, 'static')));
 app.get('*', (req, res) =>
   res.sendFile(path.resolve(__dirname, '..', 'client', 'build', 'index.html'))
 );

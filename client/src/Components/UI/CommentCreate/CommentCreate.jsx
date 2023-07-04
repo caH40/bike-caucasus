@@ -29,7 +29,7 @@ const CommentCreate = ({ authUser, setTrigger, newsId }) => {
       <div className={classes.box__avatar}>
         <img
           className={classes.avatar}
-          src={authUser.user.photoProfile || '/images/avatar.svg'}
+          src={authUser.user.photoProfile || '/assets/images/avatar.svg'}
           alt="avatar"
         />
       </div>
