@@ -39,7 +39,7 @@ export async function createSitemap() {
     ${urlsResults}
   </urlset>	`;
 
-    fs.writeFile(path.resolve(__dirname, 'build', 'sitemap.xml'), data, (err) => {
+    fs.writeFile(path.join(__dirname, '..', 'client', 'build', 'sitemap.xml'), data, (err) => {
       if (err) throw err;
       console.log('Sitemap.xml created', new Date().toLocaleString());
     });

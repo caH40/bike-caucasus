@@ -6,7 +6,6 @@ export async function getUrlsResults() {
     const uniqueResultId = new Set();
     resultsDB.forEach((result) => uniqueResultId.add(result.eventId.toString()));
     const uniqueResultIdArr = Array.from(uniqueResultId);
-    console.log(uniqueResultIdArr);
     const urlsResults = uniqueResultIdArr.map((result) => {
       return `
     <url>
