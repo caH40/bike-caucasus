@@ -62,6 +62,7 @@ export async function getAlbumsService(galleryId) {
     const albumsDB = await Album.find({ galleryId })
       .populate({ path: 'creatorId', select: 'username' })
       .populate({ path: 'galleryId', select: 'name' });
+    albumsDB.sort((a, b) => b.date - a.date);
     return { message: 'Альбомы', albums: albumsDB };
   } catch (error) {
     throw error;
